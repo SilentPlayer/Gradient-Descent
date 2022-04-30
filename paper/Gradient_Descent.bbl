@@ -1,0 +1,84 @@
+\begin{thebibliography}{7}
+% BibTex style file: imsart-nameyear.bst, 2013-01-28
+% Default style options (sort=1,type=nameyear).
+% Used options (sort=1,type=nameyear).
+
+\bibitem[\protect\citeauthoryear{Aggarwal}{2018}]{Aggarwal18}
+\begin{bbook}[author]
+\bauthor{\bsnm{Aggarwal},~\bfnm{Charu~C.}\binits{C.~C.}}
+(\byear{2018}).
+\btitle{Neural Networks and Deep Learning}.
+\bpublisher{Springer}, \baddress{Cham}.
+\bdoi{10.1007/978-3-319-94463-0}
+\end{bbook}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Deisenroth, Faisal and
+  Ong}{2020}]{Deisenroth2020}
+\begin{bbook}[author]
+\bauthor{\bsnm{Deisenroth},~\bfnm{Marc~Peter}\binits{M.~P.}},
+  \bauthor{\bsnm{Faisal},~\bfnm{A.~Aldo}\binits{A.~A.}} \AND
+  \bauthor{\bsnm{Ong},~\bfnm{Cheng~Soon}\binits{C.~S.}}
+(\byear{2020}).
+\btitle{Mathematics for Machine Learning}.
+\bpublisher{Cambridge University Press}.
+\end{bbook}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{G{\'e}ron}{2019}]{geron2019hands}
+\begin{bbook}[author]
+\bauthor{\bsnm{G{\'e}ron},~\bfnm{A.}\binits{A.}}
+(\byear{2019}).
+\btitle{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow:
+  Concepts, Tools, and Techniques to Build Intelligent Systems}.
+\bpublisher{O'Reilly Media}.
+\end{bbook}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{2014}]{adam}
+\begin{bmisc}[author]
+\bauthor{\bsnm{Kingma},~\bfnm{Diederik~P.}\binits{D.~P.}} \AND
+  \bauthor{\bsnm{Ba},~\bfnm{Jimmy}\binits{J.}}
+(\byear{2014}).
+\btitle{Adam: A Method for Stochastic Optimization}.
+\bdoi{10.48550/ARXIV.1412.6980}
+\end{bmisc}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Polyak}{1964}]{polyak}
+\begin{barticle}[author]
+\bauthor{\bsnm{Polyak},~\bfnm{Boris}\binits{B.}}
+(\byear{1964}).
+\btitle{Some methods of speeding up the convergence of iteration methods}.
+\bjournal{Ussr Computational Mathematics and Mathematical Physics}
+\bvolume{4}
+\bpages{1-17}.
+\bdoi{10.1016/0041-5553(64)90137-5}
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Riedmiller and
+  Braun}{1993}]{RiedmillerM1993Adam}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Riedmiller},~\bfnm{M}\binits{M.}} \AND
+  \bauthor{\bsnm{Braun},~\bfnm{H}\binits{H.}}
+(\byear{1993}).
+\btitle{A direct adaptive method for faster backpropagation learning: the RPROP
+  algorithm}.
+In \bbooktitle{IEEE International Conference on Neural Networks}
+\bpages{586--591 vol.1}.
+\bpublisher{IEEE}.
+\end{binproceedings}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Shalev-Shwartz and Ben-David}{2014}]{shalev}
+\begin{bbook}[author]
+\bauthor{\bsnm{Shalev-Shwartz},~\bfnm{Shai}\binits{S.}} \AND
+  \bauthor{\bsnm{Ben-David},~\bfnm{Shai}\binits{S.}}
+(\byear{2014}).
+\btitle{Understanding Machine Learning - From Theory to Algorithms.}
+\bpublisher{Cambridge University Press}.
+\end{bbook}
+\endbibitem
+
+\end{thebibliography}
