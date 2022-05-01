@@ -38,7 +38,7 @@
 \runtitle{Gradient descent based optimization algorithms}
 
 \begin{aug}
-\author{\fnms{ano} \snm{nymous}\ead[label=e1]{a01329095@unet.univie.ac.at}}
+\author{\fnms{a} \snm{nonymous}\ead[label=e1]{a01329095@unet.univie.ac.at}}
 
 
 
@@ -62,18 +62,21 @@ To perform gradient descent we calculate the gradient of the function we want to
 \min_{\theta} f(\theta)
 \end{equation}
 
-To get to the minimum, we start at some random position and update this position by going some step size $\eta$ in the negative direction of the gradient. This is done because the gradient points to direction of the steepest ascent and the negative gradient to the steepest descent. We iteratively should get closer to a minimum until we converge to it. The step size $\eta$ is a hyperparameter which needs to be chosen wisely, because if it is too big, the function might not converge, whereas if it is too small the function is more likely to get stuck and takes a long time to converge. Another important role is assigned to the starting point, since some unlucky choice might cause getting stuck at a local minimum. The closer we get to the optimum, the smaller gets the gradient and the smaller are the steps, as we can see in figure \ref{fig:gdex1}. Our objective function to iteratively update our position (later on called parameters) is given by:
+To get to the minimum, we start at some random position and update this position by going some step size $\eta$ (sometimes called learning rate) in the negative direction of the gradient. This is done because the gradient points to direction of the steepest ascent and the negative gradient to the steepest descent. We iteratively should get closer to a minimum, until we converge to it. The step size $\eta$ is a hyperparameter which needs to be chosen wisely, because if it is too big, the function might not converge, whereas if it is too small the function is more likely to get stuck and it takes a long time until convergence. Another important role is assigned to the starting point, since some unlucky choice might cause getting stuck at a local minimum. The closer we get to the optimum, the smaller gets the gradient and the smaller are the steps, as we can see in figure \ref{fig:gdex1}. Our objective function to iteratively update our position (later on called parameters) is given by:
 \begin{equation} \label{eq:gd}
 \theta^{(t)} = \theta^{(t-1)} + \eta \nabla f(\theta^{(t-1)})
 \end{equation}
 where $\theta^{(t)}$ and $\theta^{(t-1)}$ are some vectors from some vector space $\mathbb{R}^d$, also called parameters later on. The $t$ stands for the iteration of the algorithm. The optimization process doesn't always converge to the optimal value, because we can get stuck in a local optimum as mentioned before. But there are conditions for our function which guarantee convergence to the global minimum, as described by \cite{shalev} in chapter 14 they are: 
+
+\begin{center}
 \begin{itemize}
 \item convexity
 \item differentiability
 \item lipschitz continuity
 \end{itemize}
+\end{center}
 
-In theory gradient descent gives you a fast path to the minimum of a function. In practice we don't have all these conditions and we also don't know our function, we only estimate it with some sampled data. This can help escaping a local optimum, since the function estimated from some samples will be noisy.
+In theory gradient descent gives a fast path to the minimum of a function. In practice we don't have all these conditions and we also don't know our function most of the times, we only estimate it with some sampled data. This can help escaping a local optimum, since the function estimated from some samples will be noisy.
 
 \begin{figure}[htb]
 \centering
@@ -92,10 +95,10 @@ f(\theta) = \sum_{n=1}^{N} f_{n}(\theta)
 
 
 \subsection{Stochastic gradient descent - SGD}
-is a variant, which takes one sample from our dataset and updates our parameters (called $x$ in \ref{eq:gd}). SGD is very fast when computing the gradient, because we use only one sample. On the other hand, as described before, it makes our function very noisy and it might take more time until the function converges (\ref{fig:contour}), but it can prevent getting stuck in some local minimum. Stochastic comes from the fact that we don't know the gradient exactly, we introduce some randomness to the process of finding an optimum. 
+SGD is a variant, which takes one sample from our dataset and updates our parameters (called $x$ in \ref{eq:gd}). SGD is very fast when computing the gradient, because we use only one sample. On the other hand, as described before, it makes our function very noisy and it might take more time until the function converges (\ref{fig:contour}), but it can prevent getting stuck in some local minimum. The stochasticity comes from the fact that we estimate the gradient and the function from a single sample. We introduce some randomness to the process of finding an optimum.
 
 \subsection{Batch gradient descent}
-is often called vanilla gradient descent and uses all of our data to calculate the gradient. It is computationally more expensive than SGD and thus takes more time till convergence. The path we take till convergence is also more stable, than when using SGD.
+Batch gradient descent is often called vanilla gradient descent and uses all of our data to calculate the gradient. It is computationally more expensive than SGD and thus takes more time till convergence. The path we take till convergence is also more stable, than when using SGD.
 
 \begin{figure}[htb]
 \centering
@@ -105,13 +108,13 @@ is often called vanilla gradient descent and uses all of our data to calculate t
 \end{figure}
 
 \subsection{Mini-batch gradient descent}
-could be described as a method which is a mix of both variants described before. For mini-batch GD we take a portion of our data (mini-batch) and perform one update to the parameters. The path till convergence wouldn't be as extreme as for SGD, but not as smooth as for the batch variant like in figure \ref{fig:contour}. It takes the advantages from both SGD and batch gradient descent, but without their disadvantages.
+This method could be described as a mix of both variants described before. For mini-batch gradient descent we take a portion of our data (mini-batch) and perform one update to the parameters. The path till convergence wouldn't be as extreme as for SGD, but not as smooth as for the batch variant like in figure \ref{fig:contour}. It takes the advantages from both SGD and batch gradient descent, but without their disadvantages.
 
 \section{Gradient descent based optimization algorithms}
-In this section we would like to explore some optimization algorithms, which are based on gradient descent and give some intuition on when to use them. There are a lot more than which will be presented, the focus will be on the most popular ones at the time of writing this paper.
+In this section we would like to explore some optimization algorithms, which are based on gradient descent and give some intuition on how they work. There are a lot more than which will be presented, the focus will be on the most popular ones at the time of writing this paper.
 
 \subsection{Momentum based GD}
-We can imagine the idea behind this algorithm best if we think of a ball rolling down some hill. The ball starts slowly but quickly picks up momentum and accelerates until it reaches the valley, where it will slow down and eventually stop as described by \cite{geron2019hands}. Even if due to momentum, the valley will be exceeded, eventually it will be reached after some oscillation. The idea is originally proposed by Boris Polyak in 1964 (\cite{polyak}).\\
+We can imagine the idea behind this algorithm best if we think of a ball rolling down some hill. The ball starts slowly but quickly picks up momentum and accelerates until it reaches the valley, where it will slow down and eventually stop as described by \cite{geron2019hands}. Even if due to momentum, the valley will be exceeded, eventually it will be reached after some oscillation. The idea is originally proposed by \cite{polyak}.\\
 Naturally the closer we get to some minimum, the smaller become the steps, that's why momentum can be quite handy to escape local minima. To get some momentum in our iterative algorithm, we not only need to consider the current gradient, but also past gradients. Mathematically we make this work by calculating some momentum vector $v$, which is updated by the gradient each iteration, and this vector then updates our parameters. The formula for momentum based gradient descent is given by:
 
 \begin{equation} \label{eq:mgd1}
@@ -135,10 +138,10 @@ v_{i} = v_{i} + \left(\frac{\partial f(\theta)}{\partial \theta_{i}}\right)^2
 \end{equation}
 
 In equation \ref{eq:adagrad1} we keep track of the aggregated squared magnitude as mentioned before and in equation \ref{eq:adagrad2} we update our parameters like in gradient descent scaled by $\sqrt{v_{i}}$. Note that in this section all the formulas are element-wise, before they were vector-wise. \\
-As we can see in \ref{eq:adagrad1} $v_{i}$ gets bigger and bigger and it's square root scales the learning rate down. This means, if the gradient is steep, the learning rate decays very quickly. This can become a problem for reaching the minimum, since at some point the updates will become so small that they won't change our parameters. In the next methods this problem will be fixed, by using exponential averaging.
+As we can see in \ref{eq:adagrad1} $v_{i}$ gets bigger and bigger and it's square root scales the learning rate down. This means, if the gradient is steep, the learning rate decays very quickly. This can become a problem for reaching the minimum, since at some point the updates will become so small that they won't change our parameters. In the next methods this problem will be fixed, by using averaging.
 
 \subsection{RProp}
-Resilient propagation is an optimization algorithm, which uses the signs of the gradient to compute the updates. It gets mentioned in this paper, because it is necessary to understand why RMSprop was introduced by Geoff Hinton. As described by \cite{RiedmillerM1993Adam} RProp performs a direct adaptation of the weight step based on local gradient information. The adaption is not blurred by gradient behaviour whatsoever. To make this work, we keep track of a separate learning rate $\eta_{i}$ for each dimension to update the parameter $\theta_{i}$. We need to initialize $\eta$ for the first and second iteration. The adaption rule works as follows: Every time the the partial derivative of a parameter $\theta_{i}$ changes sign, this indicates that the last update was too big and the algorithm has jumped over a local minimum, the step size $\eta_{i}$ gets decreased. In equation \ref{eq:rprop2} we can see this behaviour, because $0<\beta<1<\alpha$ and this means that if the partial derivatives have a different sign, we multiply with $\beta$ which is less than one.
+Resilient propagation is an optimization algorithm, which uses the signs of the gradient to compute the updates. It gets mentioned in this paper, because it is necessary to understand why RMSprop was introduced by Geoff Hinton. As described by \cite{RiedmillerM1993Adam} RProp performs a direct adaptation of the parameters (sometimes called weights) step based on local gradient information. The adaption is not blurred by gradient behaviour whatsoever. To make this work, we keep track of a separate learning rate $\eta_{i}$ for each dimension to update the parameter $\theta_{i}$. We need to initialize $\eta$ for the first and second iteration. The adaption rule works as follows: Every time the the partial derivative of a parameter $\theta_{i}$ changes sign, this indicates that the last update was too big and the algorithm has jumped over a local minimum, the step size $\eta_{i}$ gets decreased. In equation \ref{eq:rprop2} we can see this behaviour, because $0<\beta<1<\alpha$ and this means that if the partial derivatives have a different sign, we multiply with $\beta$ which is less than one.
 
 \begin{equation} \label{eq:rprop1}
 \theta_{i}^{(t)} = \theta_{i}^{(t-1)} - \eta_{i}^{(t-1)}*sign\left(\frac{\partial f(\theta^{(t-1)})}{\partial \theta_{i}^{(t-1)}} \right)
@@ -159,7 +162,7 @@ To make sure the learning rates won't get too big or too small we use clipping v
 The big advantage of RProp is that the updates get calculated individually for each parameter and, this means if one is very close and another parameter is still far off, this is no problem. 
 
 \subsection{RMSprop}
-Root Mean Square Propagation was first proposed by Geoff Hinton during the Coursera course "Neural Network for Machine Learning". There was no official paper published, but the \href{https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf}{slides} of the lecture, which introduce the algorithm are available and give a good overview. In lecture 6e of the slides, RMSProp is explained.
+Root Mean Square Propagation was first proposed by Geoff Hinton during the Coursera course "Neural Network for Machine Learning". There was no official paper published, but the \href{https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf}{slides} of the lecture, which introduce the algorithm are available and give a good overview. In lecture 6e of the slides, RMSprop is explained.
 
 \begin{equation} \label{eq:rmsprop1}
 v_{i} = \beta v_{i} + (1-\beta) \left(\frac{\partial f(\theta)}{\partial \theta_{i}}\right)^2
@@ -169,11 +172,11 @@ v_{i} = \beta v_{i} + (1-\beta) \left(\frac{\partial f(\theta)}{\partial \theta_
 \theta_{i} = \theta_{i} - \frac{\eta}{\sqrt{v_{i}}} \left(\frac{\partial f(\theta)}{\partial \theta_{i}} \right)
 \end{equation}
 
-RMSprop was developed by Hinton, because RProp doesn't work well with mini-batches. For example, when we consider the situation that the partial derivative of one parameter is 0.1 on nine mini-batches and -0.9 on the tenth mini-batch (using a mini-batch size of 10), the value should stay roughly where it is. RProp would increment its value 9 times and only decrease it once by about the same value. This means the parameter grows a lot. RMSprop also addresses the problems of adaptive methods, like adagrad which where described at the end of \ref{adagrad}. \\
+RMSprop was developed by Hinton, because RProp doesn't work well with mini-batches. For example, when we consider the situation that the partial derivative of one parameter is 0.1 on nine mini-batches and -0.9 on the tenth mini-batch (using a mini-batch size of 10), the value should stay roughly where it is. RProp would increment its value 9 times and only decrease it once by about the same value. This means the parameter grows a lot, RProp has scaling issues when used together with mini-batch GD. RMSprop also addresses the problems of adaptive methods, like adagrad which where described at the end of \ref{adagrad}. \\
 The problem that varying gradients can cause in RProp get mitigated in RMSprop, because we use a moving average of the squared gradient. The root of this moving average is then used to scale the gradient update accordingly as we can see in equation \ref{eq:rmsprop2}. In equation \ref{eq:rmsprop1} we use a parameter $\beta$ for the moving average which is set to 0.9 in the lecture slides.
 
 \subsection{Adam}
-The Adaptive Moment Estimation algorithm is very popular and is another method that computes adaptive learning rates for each parameter. It is basically a combination of RMSprop and momentum. We keep track of an exponentially decaying average of past gradients (\ref{eq:adam1}) like in momentum and we also keep track of the squared average of past gradients (\ref{eq:adam2}), which we do in RMSprop. As described by \cite{adam}, some of the advantages of this algorithm are, that the magnitudes of parameter updates are invariant to rescaling the gradient, the step-sizes are bounded by the stepsize of the hyperparameter and it works for sparse gradients.
+The Adaptive Moment Estimation algorithm is very popular and is another method that computes adaptive learning rates for each parameter. It is basically a combination of RMSprop and momentum. We keep track of an exponentially decaying average of past gradients (\ref{eq:adam1}) like in momentum and we also keep track of the squared average of past gradients (\ref{eq:adam2}), which we do in RMSprop. As described by \cite{adam}, some of the advantages of this algorithm are, that the magnitudes of parameter updates are invariant to rescaling the gradient, the stepsizes are bounded by the stepsize of the hyperparameter and it works for sparse gradients.
 
 \begin{equation} \label{eq:adam1}
 u = \beta_{1} u + (1-\beta_{1}) \nabla f(\theta)
@@ -199,29 +202,26 @@ In equation \ref{eq:adam2} the square of the gradient is an element-wise operati
 The $\epsilon$ in \ref{eq:adam5} is a smoothing term and usually some small value like $10^{-8}$ is chosen. \cite{geron2019hands} mentions that adam requires less tuning of $\eta$ than the algorithms presented before.
 
 \section{Visualizing optimization algorithms}
-The goal for this section, is to compare the discussed optimization algorithms with some plots, which show their paths to the minimum. The implementation was done in python using pyplot from matplotlib for plotting and tensorflow to calculate the gradients of the functions. The code is available at \href{https://github.com/SilentPlayer/Gradient-Descent/tree/main/code}{github}. \\
-All the discussed optimization algorithms are implemented and can be used to visualize them in a 2D- or 3D-contour-plot. All optimizers implement the abstract class optimizer, to give them the same structure. The abstract method apply\_gradients is implementd in each of them, which is then used to update the parameters according to the algorithm. The main class is min\_function, which is initialized with a function (needs to be 3D-function), a starting point (start), the global minimum (global\_min), which is needed to check if the gradient descent has reached the optimium, a learning rate (learning\_rate) and a list of optimizers which we want to compare. When creating an object of min\_function the calculation heavy stuff is done during the creation, because we minimize the function for all optimizers. This is done by calling minimize for every optimizer, we initialize two parameters with the starting point and create lists to store the values, to later plot them. Then we calculate the gradient and update the parameters by using the implemented optimizers, iteratively and we stop when we are really close to the minimum. The function plot2d creates a 2D-contourplot and also plots the values which where calculated and stored in lists before, plot3d does exactly the same just in 3D. In the 3 dimensional case we can even rotate our function and have a look from different directions. We can even create a gif of the 2D-plots with the function create\_gif, to see the different paths evolving for all methods.
+The goal for this section, is to compare the discussed optimization algorithms with some plots, which show their different paths to the minimum. The implementation was done in python3 with anaconda (the while code is available as .py files too) and jupyter-notebook using pyplot from matplotlib for plotting and tensorflow to calculate the gradients of the functions. The code is available at \href{https://github.com/}{github}. \\
+Most of the discussed optimization algorithms are implemented and can be used to visualize them in a 2D- or 3D-contour-plot. All optimizers implement the abstract class optimizer, to give them the same structure. The abstract method apply\_gradients is implemented in each of them, which is then used to update the parameters according to the algorithm. The main class is min\_function, which is initialized with a function (needs to be a 3D-function), a starting point (start), the global minimum (global\_min), which is needed to check if the gradient descent has reached the optimium, a learning rate (learning\_rate) and a list of optimizers which we want to compare. When creating an object of min\_function the calculation heavy stuff is done during the creation, because we minimize the function for all optimizers. This is done by calling minimize for every optimizer, we initialize two parameters with the starting point and create lists to store the values at each iteration (to later plot them). Then we calculate the gradient and update the parameters by using the implemented optimizers iteratively and we stop when we are really close to the minimum. The function plot2d creates a 2D-contourplot and also plots the values which where calculated and stored in lists before, plot3d does exactly the same just in 3D. In the 3 dimensional case we can even rotate our function and have a look from different directions. We can even create a gif of the 2D-plots with the function create\_gif, to see the different paths evolving for all methods.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[scale=0.7]{images/compare1.png}
-\caption{2D-contpourplot of a bowl shaped function displaying the path of different algorithms}
+\caption{2D-contpourplot of a bowl shaped function displaying the paths of different algorithms}
 \label{fig:contour1}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
 \includegraphics[scale=0.7]{images/compare2.png}
-\caption{3D-contpourplot of a bowl shaped function displaying the path of different algorithms}
+\caption{3D-contpourplot of a bowl shaped function displaying the paths of different algorithms}
 \label{fig:contour2}
 \end{figure}
 
-\begin{figure}[htb]
-\includemovie{1cm}{1cm}{../code/mygif.gif}
-\end{figure}
 
-
-\section{Discussion}
+\section{Conclusion}
+The main goal of this work is to explain different gradient descent based optimization algorithms and develop a program which lets someone compare them graphically. There is still room for improvement in the provided implementation, further algorithms can be added easily. One disadvantage is that the colouring of the paths is random, so sometimes we can end up with pretty similar colors.
 
 
 \bibliographystyle{imsart-nameyear}
