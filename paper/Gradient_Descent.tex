@@ -6,6 +6,7 @@
 \usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{movie15}
 %\usepackage{ngerman}
 
 
@@ -191,16 +192,37 @@ v = \beta_{2} v + (1-\beta_{2}) \left( \nabla f(\theta)\right)^2
 \end{equation}
 
 \begin{equation} \label{eq:adam5}
-\theta = \theta - \alpha \frac{\hat{u}}{\sqrt{\hat{v}} + \epsilon}
+\theta = \theta - \eta \frac{\hat{u}}{\sqrt{\hat{v}} + \epsilon}
 \end{equation}
 
-In equation \ref{eq:adam2} the square of the gradient is an element-wise operation and in \ref{eq:adam3} and \ref{eq:adam4} $\beta_{1}$ and $\beta_{2}$ are taken to the t'th power, where t is the iteration of the algorithm. A common value for the hyperparameter $\beta_{1}$ is 0.9 and for $\beta_{1}$ 0.999. and $\beta_{2}$   The adam optimizer bias corrects $u$ and $v$, the bias corrected versions are $\hat{u}$ and $\hat{v}$, which are used to update our parameters. We need this bias correction, because at the start of the algorithm $u$ and $v$ will be initialized with zero and therefore biased towards the initialized value.
-The $\epsilon$ in \ref{eq:adam5} is a smoothing term and usually some small value like $10^(-8)$ is chosen. \cite{geron2019hands} mentions that adam requires less tuning of $\eta$ than the algorithms presented before.
+In equation \ref{eq:adam2} the square of the gradient is an element-wise operation and in \ref{eq:adam3} and \ref{eq:adam4} $\beta_{1}$ and $\beta_{2}$ are taken to the t'th power, where t is the iteration of the algorithm. A common value for the hyperparameter $\beta_{1}$ is 0.9 and 0.999 for $\beta_{2}$. The adam optimizer bias corrects $u$ and $v$, the bias corrected versions are $\hat{u}$ and $\hat{v}$, which are used to update our parameters. We need this bias correction, because at the start of the algorithm $u$ and $v$ will be initialized with zero and therefore biased towards the initialized value.
+The $\epsilon$ in \ref{eq:adam5} is a smoothing term and usually some small value like $10^{-8}$ is chosen. \cite{geron2019hands} mentions that adam requires less tuning of $\eta$ than the algorithms presented before.
 
 \section{Visualizing optimization algorithms}
-The goal for this section, is to compare the discussed optimization algorithms with some plots, which show their paths to the minimum. The implementation was done in python using pyplot from matplotlib for plotting and tensorflow to calculate the gradients of the functions. The code 
+The goal for this section, is to compare the discussed optimization algorithms with some plots, which show their paths to the minimum. The implementation was done in python using pyplot from matplotlib for plotting and tensorflow to calculate the gradients of the functions. The code is available at \href{https://github.com/SilentPlayer/Gradient-Descent/tree/main/code}{github}. \\
+All the discussed optimization algorithms are implemented and can be used to visualize them in a 2D- or 3D-contour-plot. All optimizers implement the abstract class optimizer, to give them the same structure. The abstract method apply\_gradients is implementd in each of them, which is then used to update the parameters according to the algorithm. The main class is min\_function, which is initialized with a function (needs to be 3D-function), a starting point (start), the global minimum (global\_min), which is needed to check if the gradient descent has reached the optimium, a learning rate (learning\_rate) and a list of optimizers which we want to compare. When creating an object of min\_function the calculation heavy stuff is done during the creation, because we minimize the function for all optimizers. This is done by calling minimize for every optimizer, we initialize two parameters with the starting point and create lists to store the values, to later plot them. Then we calculate the gradient and update the parameters by using the implemented optimizers, iteratively and we stop when we are really close to the minimum. The function plot2d creates a 2D-contourplot and also plots the values which where calculated and stored in lists before, plot3d does exactly the same just in 3D. In the 3 dimensional case we can even rotate our function and have a look from different directions. We can even create a gif of the 2D-plots with the function create\_gif, to see the different paths evolving for all methods.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.7]{images/compare1.png}
+\caption{2D-contpourplot of a bowl shaped function displaying the path of different algorithms}
+\label{fig:contour1}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.7]{images/compare2.png}
+\caption{3D-contpourplot of a bowl shaped function displaying the path of different algorithms}
+\label{fig:contour2}
+\end{figure}
+
+\begin{figure}[htb]
+\includemovie{1cm}{1cm}{../code/mygif.gif}
+\end{figure}
+
 
 \section{Discussion}
+
 
 \bibliographystyle{imsart-nameyear}
 \bibliography{lit}{}
