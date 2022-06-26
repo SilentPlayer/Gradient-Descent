@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.16)  1 MAY 2022 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.16)  26 JUN 2022 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,47 +348,48 @@ Package: everyshi 2020/11/18 v4.00 EveryShipout Package
 \@MXV@textbox=\box55
 )
 \c@thm=\count295
+\colveccount=\count296
 
 (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count296
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box56
 ) (Gradient_Descent.aux)
 \openout1 = `Gradient_Descent.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count297
+\scratchcounter=\count298
 \scratchdimen=\dimen168
 \scratchbox=\box57
-\nofMPsegments=\count298
-\nofMParguments=\count299
+\nofMPsegments=\count299
+\nofMParguments=\count300
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count300
+\MPscratchCnt=\count301
 \MPscratchDim=\dimen169
-\MPnumerator=\count301
-\makeMPintoPDFobject=\count302
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
 \everyMPtoPDFconversion=\toks34
 )
 (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -407,7 +408,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 34.
+Package hyperref Info: Link coloring ON on input line 51.
  (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -418,22 +419,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count303
+\c@section@level=\count304
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
  (Gradient_Descent.out) (Gradient_Descent.out)
 \@outlinefile=\write3
 \openout3 = `Gradient_Descent.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 
 (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (C:\Users\erwin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -441,84 +442,130 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 47.
+(Font)              using `OT1/cmr/m/it' instead on input line 64.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 80.
+Package hyperref Warning: Suppressing link with empty target on input line 99.
 
 [1{C:/Users/erwin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
-<images/gd_ex1.png, id=86, 433.62pt x 289.08pt>
+<images/gd_ex1.png, id=99, 433.62pt x 289.08pt>
 File: images/gd_ex1.png Graphic file (type png)
 <use images/gd_ex1.png>
-Package pdftex.def Info: images/gd_ex1.png  used on input line 83.
+Package pdftex.def Info: images/gd_ex1.png  used on input line 111.
 (pdftex.def)             Requested size: 360.0pt x 240.01132pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/sc' instead on input line 84.
+(Font)              using `OT1/cmr/m/sc' instead on input line 112.
 
 [2 <./images/gd_ex1.png>]
-<images/contour.png, id=105, 612.78937pt x 398.23781pt>
+<images/contour.png, id=118, 612.78937pt x 398.23781pt>
 File: images/contour.png Graphic file (type png)
 <use images/contour.png>
-Package pdftex.def Info: images/contour.png  used on input line 105.
+Package pdftex.def Info: images/contour.png  used on input line 134.
 (pdftex.def)             Requested size: 183.83823pt x 119.47226pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/sc' instead on input line 106.
+(Font)              using `OT1/cmr/m/sc' instead on input line 135.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/sc' instead on input line 106.
+(Font)              using `OT1/cmr/m/sc' instead on input line 135.
 
 [3 <./images/contour.png>] [4] [5] [6]
-<images/compare1.png, id=177, 462.528pt x 346.896pt>
+<images/compare1.png, id=190, 462.528pt x 346.896pt>
 File: images/compare1.png Graphic file (type png)
 <use images/compare1.png>
-Package pdftex.def Info: images/compare1.png  used on input line 210.
+Package pdftex.def Info: images/compare1.png  used on input line 242.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/sc' instead on input line 211.
+(Font)              using `OT1/cmr/m/sc' instead on input line 243.
 
-<images/compare2.png, id=178, 462.528pt x 334.1283pt>
+<images/compare2.png, id=191, 462.528pt x 334.1283pt>
 File: images/compare2.png Graphic file (type png)
 <use images/compare2.png>
-Package pdftex.def Info: images/compare2.png  used on input line 217.
+Package pdftex.def Info: images/compare2.png  used on input line 249.
 (pdftex.def)             Requested size: 323.76738pt x 233.8882pt.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/sc' instead on input line 218.
+(Font)              using `OT1/cmr/m/sc' instead on input line 250.
 
-[7 <./images/compare1.png>] (Gradient_Descent.bbl)
+
+Overfull \hbox (4.90024pt too wide) in paragraph at lines 255--256
+ \OT1/cmr/m/n/10 4.2.\OT1/cmr/m/it/10 Simulations.[][] \OT1/cmr/m/n/10 For the 
+em-pir-i-cal com-par-i-son of the dif-fer-ent al-go-rithms, which
+ []
+
+[7] [8 <./images/compare1.png>] [9 <./images/compare2.png>]
+<images/comparison1.png, id=220, 1084.05pt x 1084.05pt>
+File: images/comparison1.png Graphic file (type png)
+<use images/comparison1.png>
+Package pdftex.def Info: images/comparison1.png  used on input line 277.
+(pdftex.def)             Requested size: 401.09222pt x 401.09222pt.
+
+Overfull \hbox (41.09222pt too wide) in paragraph at lines 277--278
+ [][] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 278.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 278.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 294.
+
+<images/comparison2.png, id=221, 1084.05pt x 1084.05pt>
+File: images/comparison2.png Graphic file (type png)
+<use images/comparison2.png>
+Package pdftex.def Info: images/comparison2.png  used on input line 300.
+(pdftex.def)             Requested size: 401.09222pt x 401.09222pt.
+
+Overfull \hbox (41.09222pt too wide) in paragraph at lines 300--301
+ [][] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 301.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 301.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 317.
+
+(Gradient_Descent.bbl)
 
 Package movie15 Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 (movie15)                @@ Package `movie15' is obsolete and @@
 (movie15)                @@ superseded by `media9'.           @@
 (movie15)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
 
-[8 <./images/compare2.png>] (Gradient_Descent.aux)
-
-Package rerunfilecheck Warning: File `Gradient_Descent.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Gradient_Descent.out':
-(rerunfilecheck)             Before: 0ECD9550AC3512FF5D96F88633129A30;2077
-(rerunfilecheck)             After:  D0311E01E10D4EAF73252551AC2E204A;2077.
+[10] [11 <./images/comparison1.png>] [12 <./images/comparison2.png>]
+(Gradient_Descent.aux)
+Package rerunfilecheck Info: File `Gradient_Descent.out' has not changed.
+(rerunfilecheck)             Checksum: AFD52491210D6F17CD53D4D6ACBB1670;2453.
  ) 
 Here is how much of TeX's memory you used:
- 11171 strings out of 478552
- 174507 string characters out of 2841938
- 499449 words of memory out of 3000000
- 29176 multiletter control sequences out of 15000+600000
- 477256 words of font info for 58 fonts, out of 8000000 for 9000
+ 11214 strings out of 478552
+ 175190 string characters out of 2841938
+ 500007 words of memory out of 3000000
+ 29202 multiletter control sequences out of 15000+600000
+ 477954 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,64p,1597b,345s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,15n,64p,1694b,377s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\erwin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/erwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/erwin/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -544,9 +591,9 @@ Users/erwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.
 pfb><C:/Users/erwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmti8.pfb><C:/Users/erwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on Gradient_Descent.pdf (8 pages, 735475 bytes).
+Output written on Gradient_Descent.pdf (12 pages, 893651 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
